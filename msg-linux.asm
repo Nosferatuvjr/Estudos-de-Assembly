@@ -5,10 +5,10 @@
 ;Para executar: #./demo
 
 section .data
-msg db "Isso é uma mensagem de teste",0xA           ;Pula linha com 0xA
+msg db "Isso eh uma mensagem de teste",0xA	    ;Pula linha com 0xA
 len equ $-msg                                       ;Calcula a posição atual "-" (menos) a posição de msg
 
-msg2 db "Isso é uma mensagem de teste 2",0xA        ;Pula linha com 0xA
+msg2 db "Isso eh uma mensagem de teste 2",0xA       ;Pula linha com 0xA
 len2 equ $-msg2
 
 section .text
@@ -20,7 +20,7 @@ mov edx, len                                        ;Pega o tamanho da mensagem 
 mov ecx, msg                                        ;Endereço da mensagem
 mov ebx, 1                                          ;Saída padrão da chamada
 mov eax, 4                                          ;
-int 0x80                                           ;Primeira interrupição
+int 0x80                                            ;Primeira interrupição
 
 call _anotherfunction
 
